@@ -1,0 +1,36 @@
+{
+  "rated-movies": [
+    {
+      "id": "a0d3",
+      "movieId": 653346,
+      "movieTitle": "Kingdom of the Planet of the Apes",
+      "movieOverview": "Several generations in the future following Caesar's reign, apes are now the dominant species and live harmoniously while humans have been reduced to living in the shadows. As a new tyrannical ape leader builds his empire, one young ape undertakes a harrowing journey that will cause him to question all that he has known about the past and to make choices that will define a future for apes and humans alike.",
+      "movieImg": "/gKkl37BQuKTanygYQG1pyYgLVgf.jpg",
+      "rating": "7"
+    },
+    {
+      "id": "8160",
+      "movieId": 5174,
+      "movieTitle": "Rush Hour 3",
+      "movieOverview": "After a botched assassination attempt, the mismatched duo finds themselves in Paris, struggling to retrieve a precious list of names, as the murderous crime syndicate's henchmen try their best to stop them. Once more, Lee and Carter must fight their way through dangerous gangsters; however, this time, the past has come back to haunt Lee. Will the boys get the job done once and for all?",
+      "movieImg": "/rZ7IxJlPhNNJ6Rn8z1rzsXuA70P.jpg",
+      "rating": "10"
+    },
+    {
+      "id": "bd77",
+      "movieId": 150540,
+      "movieTitle": "Inside Out",
+      "movieOverview": "From an adventurous balloon ride above the clouds to a monster-filled metropolis, Academy Award®-winning director Pete Docter (“Monsters, Inc.,” “Up”) has taken audiences to unique and imaginative places. In Disney and Pixar’s original movie “ Inside Out,” he will take us to the most extraordinary location of all—inside the mind.",
+      "movieImg": "/2H1TmgdfNtsKlU9jKdeNyYL5y8T.jpg",
+      "rating": "4"
+    },
+    {
+      "id": "29c7",
+      "movieId": 1115623,
+      "movieTitle": "The Last Kumite",
+      "movieOverview": "When Karate champion Michael Rivers wins the last tournament of his career, shady businessman Ron Hall offers him the opportunity to fight in an illegal Kumite in Bulgaria against the world’s best martial artists.  When Michael declines, Hall has his daughter kidnapped and, in order to rescue her, Rivers is left with no choice but to compete in the deadly tournament. Arriving in Bulgaria, he finds out that he is not the only fighter whose loved one was taken. Rivers enlists the help of trainers Master Loren, and Julie Jackson but will it be enough for him to win the tournament and save his daughter’s life?",
+      "movieImg": "/zDkaJgsPoSqa2cMe2hW2HAfyWwO.jpg",
+      "rating": "20"
+    }
+  ]
+}
