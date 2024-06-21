@@ -24,7 +24,7 @@ export default {
   },
   computed: {
     shortedOverview() {
-      return this.movie.movieOverview.substring(1, 200);
+      return this.movie.movieOverview.substring(0, 200);
     },
   },
 };
@@ -36,15 +36,8 @@ export default {
       class="movie-image"
       :src="'https://image.tmdb.org/t/p/w500' + movie.movieImg"
       :alt="movie.movieTitle"
-      @mouseenter="handleMouseEnter"
-      @mouseleave="handleMouseLeave"
     />
-    <div
-      class="movie-info"
-      v-show="isHovered"
-      @mouseenter="handleMouseEnter"
-      @mouseleave="handleMouseLeave"
-    >
+    <div class="movie-info">
       <h2 class="movie-title">{{ movie.movieTitle }}</h2>
       <p class="movie-description">
         {{ shortedOverview }}
@@ -74,17 +67,17 @@ export default {
   position: relative;
   width: 300px;
   margin: 0 auto;
-  border: 1px solid rgba(0, 0, 0, 0.664);
 }
 
 .movie-image {
   width: 100%;
   height: auto;
+  border-radius: 16px;
 }
 
 .movie-info {
-  background-color: #ffffffd7;
-  color: #000000;
+  background-color: #1e293bea;
+  color: #ffffff;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -93,6 +86,7 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  border-radius: 0 0 16px 16px;
 }
 
 .movie-title {
@@ -118,7 +112,6 @@ export default {
 }
 
 .rating-indicator {
-  border: 2px solid #000;
   padding: 0.8rem;
   border-radius: 100px;
   font-weight: bold;

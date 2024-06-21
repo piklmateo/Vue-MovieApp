@@ -40,14 +40,17 @@ export default {
         return;
       }
       try {
-        const res = await fetch(`https://api.themoviedb.org/3/search/movie?query=${this.movieName}`, {
-          method: "GET",
-          headers: {
-            "Content-type": "application/json",
-            Authorization:
-              "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3MzBjMDAwZTYzYjM2ZTcwZjdhYTdhNmFlNGY3ODNkZSIsInN1YiI6IjY2NzNmOWZlNzhhZjIyZTIxNTE2ZDAyMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.BKZxvkSxopJe6WfipvNX7Onz1kncLD4yOy90Pi0Im2U",
-          },
-        });
+        const res = await fetch(
+          `https://api.themoviedb.org/3/search/movie?query=${this.movieName}`,
+          {
+            method: "GET",
+            headers: {
+              "Content-type": "application/json",
+              Authorization:
+                "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3MzBjMDAwZTYzYjM2ZTcwZjdhYTdhNmFlNGY3ODNkZSIsInN1YiI6IjY2NzNmOWZlNzhhZjIyZTIxNTE2ZDAyMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.BKZxvkSxopJe6WfipvNX7Onz1kncLD4yOy90Pi0Im2U",
+            },
+          }
+        );
 
         const data = await res.json();
         setTimeout(() => {
@@ -64,11 +67,21 @@ export default {
 <template>
   <div class="container">
     <div class="search-container">
-      <input class="search-bar" v-model="movieName" @keyup="fetchSearchedMovies" type="text" placeholder="Search for a movie" />
+      <input
+        class="search-bar"
+        v-model="movieName"
+        @keyup="fetchSearchedMovies"
+        type="text"
+        placeholder="Search for a movie"
+      />
     </div>
     <div v-if="movies.length">
       <div class="movie-gallery">
-        <MovieCard v-for="movie in displayedMovies" :key="movie.id" :movie="movie" />
+        <MovieCard
+          v-for="movie in displayedMovies"
+          :key="movie.id"
+          :movie="movie"
+        />
       </div>
     </div>
   </div>
@@ -80,12 +93,18 @@ export default {
   justify-content: flex-end;
   padding: 10px;
   max-width: 1660px;
-  /*border: 1px solid red;*/
+
   margin: 10px auto;
 }
 
 .search-bar {
-  padding: 5px;
+  padding: 10px;
+  background: #1e293b;
+  border: none;
+  border-radius: 16px;
+  color: #ffffff;
+  outline: none;
+  cursor: pointer;
 }
 
 .container {

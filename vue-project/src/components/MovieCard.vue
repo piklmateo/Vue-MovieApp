@@ -17,7 +17,7 @@
       <p class="movie-description">
         {{ shortenedDescription }}
       </p>
-      <router-link :to="'/movie-page/' + movie.id" class="movie-page-link"
+      <router-link :to="'/movie-page/' + movie.id" class="route-link"
         >More...</router-link
       >
     </div>
@@ -62,17 +62,17 @@ export default {
   position: relative;
   width: 300px;
   margin: 0 auto;
-  border: 1px solid rgba(0, 0, 0, 0.664);
 }
 
 .movie-image {
   width: 100%;
   height: auto;
+  border-radius: 16px;
 }
 
 .movie-info {
-  background-color: #ffffffd7;
-  color: #000000;
+  background-color: #1e293bea;
+  color: #ffffff;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -81,6 +81,7 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  border-radius: 0 0 16px 16px;
 }
 
 .movie-title {
@@ -91,12 +92,5 @@ export default {
 .movie-description {
   margin: 0;
   font-size: 14px;
-}
-
-.movie-page-link {
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  justify-content: flex-end;
-  cursor: pointer;
 }
 </style>

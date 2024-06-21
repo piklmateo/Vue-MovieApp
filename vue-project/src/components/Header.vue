@@ -5,8 +5,14 @@ export default {};
 <template>
   <div class="container">
     <div class="header-flex-container">
-      <h1>Movie Project</h1>
-      <h3><router-link to="/rated-movies">Rated Movies</router-link></h3>
+      <router-link class="router-link heading" to="/">
+        <h1>Movie Project</h1>
+      </router-link>
+      <h3>
+        <router-link class="route-link" to="/rated-movies"
+          >Rated Movies</router-link
+        >
+      </h3>
     </div>
     <div class="header-line"></div>
   </div>
@@ -17,13 +23,18 @@ export default {};
   width: 100%;
 }
 
+.heading {
+  color: #93c5fd;
+  text-decoration: none;
+}
+
 .header-flex-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
   max-width: 1660px;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .header-line {

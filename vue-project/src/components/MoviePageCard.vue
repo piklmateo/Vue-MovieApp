@@ -77,8 +77,11 @@ export default {
 }
 
 .movie-image {
-  width: 400px;
   height: auto;
+}
+
+.movie-image > img {
+  border-radius: 16px;
 }
 
 .movie-info {
@@ -86,6 +89,7 @@ export default {
   flex-direction: column;
   gap: 2rem;
   width: 600px;
+  color: #fff;
 }
 
 .rating-container {
@@ -98,6 +102,12 @@ export default {
 .rating-container > input {
   text-align: center;
   max-width: 50px;
+  background: #29364d;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  outline: none;
+  padding: 0.4rem;
 }
 
 .btn {
@@ -107,16 +117,18 @@ export default {
 }
 
 .btn-rating {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #1e293b;
+  color: #ffffff;
   font-weight: bold;
-  border: 1px solid #000000;
-  width: 200px;
+  padding: 1rem;
+  border: none;
+  border-radius: 16px;
+  width: fit-content;
   transition: 300ms ease-in-out;
 }
 
 .btn-rating:hover {
-  background-color: #000000;
+  background-color: #29364d;
   color: #fff;
 }
 </style>
