@@ -1,22 +1,6 @@
 {
   "rated-movies": [
     {
-      "id": "a0d3",
-      "movieId": 653346,
-      "movieTitle": "Kingdom of the Planet of the Apes",
-      "movieOverview": "Several generations in the future following Caesar's reign, apes are now the dominant species and live harmoniously while humans have been reduced to living in the shadows. As a new tyrannical ape leader builds his empire, one young ape undertakes a harrowing journey that will cause him to question all that he has known about the past and to make choices that will define a future for apes and humans alike.",
-      "movieImg": "/gKkl37BQuKTanygYQG1pyYgLVgf.jpg",
-      "rating": "7"
-    },
-    {
-      "id": "58bd",
-      "movieId": 771,
-      "movieTitle": "Home Alone",
-      "movieOverview": "Eight-year-old Kevin McCallister makes the most of the situation after his family unwittingly leaves him behind when they go on Christmas vacation. But when a pair of bungling burglars set their sights on Kevin's house, the plucky kid stands ready to defend his territory. By planting booby traps galore, adorably mischievous Kevin stands his ground as his frantic mother attempts to race home before Christmas Day.",
-      "movieImg": "/onTSipZ8R3bliBdKfPtsDuHTdlL.jpg",
-      "rating": "10"
-    },
-    {
       "id": "0c05",
       "movieId": 772,
       "movieTitle": "Home Alone 2: Lost in New York",
@@ -79,22 +63,6 @@
       "movieOverview": "Anakin Skywalker, a young slave strong with the Force, is discovered on Tatooine. Meanwhile, the evil Sith have returned, enacting their plot for revenge against the Jedi.",
       "movieImg": "/6wkfovpn7Eq8dYNKaG5PY3q2oq6.jpg",
       "rating": "8"
-    },
-    {
-      "id": "99ba",
-      "movieId": 1895,
-      "movieTitle": "Star Wars: Episode III - Revenge of the Sith",
-      "movieOverview": "The evil Darth Sidious enacts his final plan for unlimited power -- and the heroic Jedi Anakin Skywalker must choose a side.",
-      "movieImg": "/xfSAoBEm9MNBjmlNcDYLvLSMlnq.jpg",
-      "rating": "10"
-    },
-    {
-      "id": "bdbe",
-      "movieId": 12180,
-      "movieTitle": "Star Wars: The Clone Wars",
-      "movieOverview": "As the Clone Wars sweep through the galaxy, the heroic Jedi Knights struggle to maintain order and restore peace. More and more systems are falling prey to the forces of the dark side as the Galactic Republic slips further and further under the sway of the Separatists and their never-ending droid army. Anakin Skywalker and his Padawan learner Ahsoka Tano find themselves on a mission with far-reaching consequences, one that brings them face-to-face with crime lord Jabba the Hutt. But Count Dooku and his sinister agents, including the nefarious Asajj Ventress, will stop at nothing to ensure that Anakin and Ahsoka fail at their quest. Meanwhile, on the front lines of the Clone Wars, Obi-Wan Kenobi and Master Yoda lead the massive clone army in a valiant effort to resist the forces of the dark side...",
-      "movieImg": "/iJQfixW818LUdSXlCDL3JZm0S0g.jpg",
-      "rating": "10"
     }
   ]
 }

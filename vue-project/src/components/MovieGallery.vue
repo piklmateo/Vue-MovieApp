@@ -118,4 +118,31 @@ export default {
   max-width: 1660px;
   margin: 0 auto;
 }
+
+@media (max-width: 1660px) {
+  .movie-gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1400px) {
+  .movie-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1050px) {
+  .movie-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .movie-gallery {
+    grid-template-columns: 1fr;
+  }
+  .search-bar {
+    width: 100%;
+  }
+}
 </style>

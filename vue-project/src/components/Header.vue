@@ -44,4 +44,10 @@ export default {};
   border-top: none;
   border-inline: none;
 }
+
+@media (max-width: 800px) {
+  .header-flex-container {
+    flex-direction: column;
+  }
+}
 </style>

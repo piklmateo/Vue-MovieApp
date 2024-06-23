@@ -21,6 +21,29 @@ export default {
     handleMouseLeave() {
       this.isHovered = false;
     },
+    async removeMovie() {
+      try {
+        const res = await fetch(
+          `http://localhost:12413/rated-movies/${this.movie.id}`,
+          {
+            method: "DELETE",
+            headers: {
+              "Content-type": "application/json",
+            },
+          }
+        );
+
+        if (!res.ok) {
+          alert("Error while removing the movie...");
+        }
+
+        alert("Succesfully removed movie:)");
+
+        window.location.reload();
+      } catch (error) {
+        console.error("Error: ", error);
+      }
+    },
   },
   computed: {
     shortedOverview() {
@@ -37,6 +60,13 @@ export default {
       :src="'https://image.tmdb.org/t/p/w500' + movie.movieImg"
       :alt="movie.movieTitle"
     />
+    <div @click="removeMovie" class="remove-icon-container">
+      <img
+        class="remove-icon"
+        src="../../public/images/close.svg"
+        alt="close-icon"
+      />
+    </div>
     <div class="movie-info">
       <h2 class="movie-title">{{ movie.movieTitle }}</h2>
       <p class="movie-description">
@@ -73,6 +103,29 @@ export default {
   width: 100%;
   height: auto;
   border-radius: 16px;
+}
+
+.remove-icon-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  background-color: #1e293b;
+  width: fit-content;
+  padding: 0.4rem;
+  border-radius: 0 8px 0 16px;
+  border: none;
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+}
+
+.remove-icon-container:hover {
+  background-color: #344663;
+}
+
+.remove-icon {
+  width: 32px;
+  height: 32px;
 }
 
 .movie-info {
