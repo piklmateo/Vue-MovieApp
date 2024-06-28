@@ -1,4 +1,5 @@
 <script>
+const JSON_SERVER_API = import.meta.env.VITE_JSON_SERVER_API;
 export default {
   props: {
     movie: {
@@ -23,15 +24,12 @@ export default {
     },
     async removeMovie() {
       try {
-        const res = await fetch(
-          `http://localhost:12413/rated-movies/${this.movie.id}`,
-          {
-            method: "DELETE",
-            headers: {
-              "Content-type": "application/json",
-            },
-          }
-        );
+        const res = await fetch(`${JSON_SERVER_API}/${this.movie.id}`, {
+          method: "DELETE",
+          headers: {
+            "Content-type": "application/json",
+          },
+        });
 
         if (!res.ok) {
           alert("Error while removing the movie...");

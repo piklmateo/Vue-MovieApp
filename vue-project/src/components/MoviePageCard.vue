@@ -1,4 +1,6 @@
 <script>
+const JSON_SERVER_API = import.meta.env.VITE_JSON_SERVER_API;
+
 export default {
   props: {
     movie: {
@@ -14,15 +16,27 @@ export default {
   methods: {
     async addMovieAndRating() {
       try {
+        const ratingText = this.ratingText;
+
+        const regex = /^(10([.,]0)?|[1-9]([.,][0-9])?)$/;
+
+        if (!regex.test(ratingText)) {
+          alert(
+            "Please enter a number between 1 and 10, with or without only one decimal place."
+          );
+          this.ratingText = "";
+          return;
+        }
+
         const movieAndRating = {
           movieId: this.movie.id,
           movieTitle: this.movie.title,
           movieOverview: this.movie.overview,
           movieImg: this.movie.poster_path,
-          rating: this.ratingText,
+          rating: ratingText,
         };
 
-        const res = await fetch("http://localhost:12413/rated-movies", {
+        const res = await fetch(JSON_SERVER_API, {
           method: "POST",
           headers: {
             "Content-type": "application/json",
@@ -31,7 +45,7 @@ export default {
         });
 
         if (res.status !== 201) {
-          alert("Neuspjesan insert");
+          alert("Unsuccessful insert");
           return;
         }
 

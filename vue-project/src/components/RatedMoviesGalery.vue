@@ -1,5 +1,7 @@
 <script>
 import RatedMovieCard from "../components/RatedMovieCard.vue";
+const JSON_SERVER_API = import.meta.env.VITE_JSON_SERVER_API;
+
 export default {
   components: {
     RatedMovieCard,
@@ -12,7 +14,7 @@ export default {
   methods: {
     async fetchRatedMovies() {
       try {
-        const res = await fetch("http://localhost:12413/rated-movies", {
+        const res = await fetch(JSON_SERVER_API, {
           method: "GET",
           headers: {
             "Content-type": "application/json",
