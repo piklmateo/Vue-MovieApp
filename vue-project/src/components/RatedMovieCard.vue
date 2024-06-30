@@ -111,7 +111,7 @@ export default {
   background-color: #1e293b;
   width: fit-content;
   padding: 0.4rem;
-  border-radius: 0 8px 0 16px;
+  border-radius: 0 12px 0 12px;
   border: none;
   cursor: pointer;
   transition: 200ms ease-in-out;
@@ -137,7 +137,7 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  border-radius: 0 0 16px 16px;
+  border-radius: 0 0 12px 12px;
 }
 
 .movie-title {
