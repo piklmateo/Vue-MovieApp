@@ -10,6 +10,7 @@
 import MoviePageCard from "../components/MoviePageCard.vue";
 import Header from "../components/Header.vue";
 import Footer from "../components/Footer.vue";
+const TMDB_ACCESS_TOKEN = import.meta.env.VITE_TMDB_ACCESS_TOKEN;
 
 export default {
   components: {
@@ -35,8 +36,7 @@ export default {
             method: "GET",
             headers: {
               "Content-type": "application/json",
-              Authorization:
-                "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3MzBjMDAwZTYzYjM2ZTcwZjdhYTdhNmFlNGY3ODNkZSIsInN1YiI6IjY2NzNmOWZlNzhhZjIyZTIxNTE2ZDAyMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.BKZxvkSxopJe6WfipvNX7Onz1kncLD4yOy90Pi0Im2U",
+              Authorization: `Bearer ${TMDB_ACCESS_TOKEN}`,
             },
           }
         );

@@ -1,5 +1,7 @@
 <script>
 import RatedMovieCard from "../components/RatedMovieCard.vue";
+const JSON_SERVER_API = import.meta.env.VITE_JSON_SERVER_API;
+
 export default {
   components: {
     RatedMovieCard,
@@ -12,7 +14,7 @@ export default {
   methods: {
     async fetchRatedMovies() {
       try {
-        const res = await fetch("http://localhost:12413/rated-movies", {
+        const res = await fetch(JSON_SERVER_API, {
           method: "GET",
           headers: {
             "Content-type": "application/json",
@@ -59,5 +61,29 @@ export default {
   max-width: 1660px;
   margin: 0 auto;
   padding-top: 5rem;
+}
+
+@media (max-width: 1660px) {
+  .movie-gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1400px) {
+  .movie-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1050px) {
+  .movie-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .movie-gallery {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
